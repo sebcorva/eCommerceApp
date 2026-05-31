@@ -10,74 +10,111 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="navbar navbar-expand-md navbar-light bg-white border-bottom shadow-sm py-3" id="inicio">
-            <div class="container-fluid px-md-5">
-                <div class="row w-100 align-items-center m-0">
-                    <!--Logo-->
-                    <div class="col-4 d-flex justify-content-start align-items-center p-0">
-                        <a class="navbar-brand m-0" href="/index.html">
-                            <img src="img/logo.png" alt="Logo de aniMug" height="50" class="d-inline-block animacion_logo">
-                        </a>
-                    </div>
-                    <!--Nombre web-->
-                    <div class="col-4 d-flex justify-content-center align-items-center p-0">
-                        <h1 class="h3 m-0 fw-bold text-primary text-center">aniMug</h1>
-                    </div>
-                    <!--Navbar-->
-                    <div class="col-4 d-flex justify-content-end align-items-center p-0">
-                        <nav class="navbar navbar-expand-md p-0"> 
-                            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="menuNavegacion">
-                                <ul class="navbar-nav gap-3 mt-3 mt-md-0">
-                                    <li class="nav-item">
-                                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html">Inicio</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#categoria">Categorías</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#contacto">Contacto</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
+    <!--Header-->
+    <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm py-3" id="inicio">
+        <div class="container-fluid px-md-5">
+            <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="/index.html">
+                <img src="img/logo.png" alt="Logo de aniMug" height="50" class="d-inline-block animacion_logo">
+                <h1 class="h3 m-0 fw-bold text-primary">aniMug</h1>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+                <ul class="navbar-nav align-items-center gap-3 mt-3 mt-lg-0 ms-auto me-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#categoria">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0">
+                    <a class="btn btn-danger fw-semibold" href="#">Iniciar Sesión</a>
+                    <a class="btn btn-primary fw-semibold" href="/registro.html">Registrarse</a>
                 </div>
             </div>
-        </header>
-
+        </div>
+    </header>
+    <!--Registro de usuario-->
     <main>
-        
+        <section class="container-registro">
+            <div class="row justify-content-center">
+                <div class="col-md-6 bg-light p-4 rounded shadow mt-lg-5">
+                    <h2 class="text-center mb-4 text-secondary">Registro</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+                            <input type="text" class="form-control" id="fecha_nacimiento" placeholder="Seleccione su fecha...">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">Dirección de Despacho</label>
+                            <input type="text" class="form-control" id="direccion" placeholder="Ingrese su dirección de despacho">
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Nombre de Usuario</label>
+                            <input type="text" class="form-control" id="username" placeholder="Ingrese su nombre de usuario">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password2" class="form-label">Confirmar Contraseña</label>
+                            <input type="password" class="form-control" id="password2" placeholder="Ingrese su contraseña nuevamente">
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <!--Footer-->
     <footer class="bg-dark text-light py-5 border-top" id="contacto">
-        <div class="container px-md-5">
-            <div class="row align-items-center text-center text-md-start m-0">
-                <!--Copyright-->
-                <div class="col-md-4 mb-3 mb-md-0 p-0">
+        <div class="container px-4 px-md-5">
+            
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-center gap-3 m-0">
+                
+                <div class="p-0 text-center text-sm-start">
                     <p class="m-0 text-white">&copy; 2026 aniMug</p>
                 </div>
-                <!--Contacto-->
-                <div class="col-md-4 mb-3 mb-md-0 text-md-center p-0">
-                    <p class="m-0 text-muted">
+                
+                <div class="p-0 text-center">
+                    <p class="m-0">
                         Contacto: <a href="mailto:info@animug.com" class="text-light text-decoration-none hover-link">info@animug.com</a>
                     </p>
                 </div>
-                <!--Redes Sociales-->
-                <div class="col-md-4 text-md-end p-0">
-                    <div class="d-flex justify-content-center justify-content-md-end gap-3 fs-5">
+                
+                <div class="p-0 text-center text-sm-end">
+                    <div class="d-flex justify-content-center justify-content-sm-end gap-3 fs-5">
                         <a href="https://www.instagram.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="https://www.tiktok.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="TikTok"><i class="bi bi-tiktok"></i></a>
                         <a href="https://www.youtube.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="YouTube"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
+
             </div>
         </div>
     </footer>
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--Logica Form Fecha de Nacimiento-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    <script src="/js/setFechaNacimiento.js"></script>
 </body>
 </html>

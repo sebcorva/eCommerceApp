@@ -12,46 +12,30 @@
 </head>
 <body>
     <!--Header-->
-    <header class="navbar navbar-expand-md navbar-light bg-white border-bottom shadow-sm py-3" id="inicio">
+    <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm py-3" id="inicio">
         <div class="container-fluid px-md-5">
-            <div class="row w-100 align-items-center m-0">
-                <!-- Logo -->
-                <div class="col-4 d-flex justify-content-start align-items-center p-0">
-                    <a class="navbar-brand m-0" href="/index.html">
-                        <img src="img/logo.png" alt="Logo de aniMug" height="50" class="d-inline-block animacion_logo">
-                    </a>
-                </div>
-                <!--Nombre web-->
-                <div class="col-4 d-flex justify-content-center align-items-center p-0">
-                    <h1 class="h3 m-0 fw-bold text-primary text-center">aniMug</h1>
-                </div>
-                <!--Navbar-->
-                <div class="col-4 d-flex justify-content-end align-items-center p-0">
-                    <nav class="navbar navbar-expand-md p-0"> 
-                        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="menuNavegacion">
-                            <ul class="navbar-nav gap-3 mt-3 mt-md-0">
-                                <li class="nav-item">
-                                    <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html">Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#categoria">Categorías</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#contacto">Contacto</a>
-                                </li>
-                                <button type="button" class="btn btn-danger">
-                                    <a class="nav-link p-0 text-light fw-semibold link-primary" href="#">Iniciar Sesión</a>
-                                </button>
-                                <button type="button" class="btn btn-primary">
-                                    <a class="nav-link p-0 text-light fw-semibold link-primary" href="/registro.html">Registrarse</a>
-                                </button>
-                            </ul>
-                        </div>
-                    </nav>
+            <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="/index.html">
+                <img src="img/logo.png" alt="Logo de aniMug" height="50" class="d-inline-block animacion_logo">
+                <h1 class="h3 m-0 fw-bold text-primary">aniMug</h1>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+                <ul class="navbar-nav align-items-center gap-3 mt-3 mt-lg-0 ms-auto me-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#categoria">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0">
+                    <a class="btn btn-danger fw-semibold" href="#">Iniciar Sesión</a>
+                    <a class="btn btn-primary fw-semibold" href="/registro.html">Registrarse</a>
                 </div>
             </div>
         </div>
@@ -64,29 +48,37 @@
     <main class="container my-5" id="categoria">
         <section class="mb-5">
             <h2 class="about-us-title text-center mb-5">Categorías</h2>
-            <div class="container-categoria">
-                <div class="card categoria-card shadow-sm" >
-                    <img src="img/tazas/taza.jpg" class="card-img-top" alt="Categoría Tazas">
-                    <div class="card-body text-center">
-                        <a href="/tazas.html" class="h5 card-title text-decoration-none text-primary fw-bold d-block">Tazas Cerámica</a>
+            <div class="row g-4 justify-content-center m-0">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card categoria-card shadow-sm h-100">
+                        <img src="img/tazas/taza.jpg" class="card-img-top" alt="Categoría Tazas">
+                        <div class="card-body text-center">
+                            <a href="/tazas.html" class="h5 card-title text-decoration-none text-primary fw-bold d-block">Tazas Cerámica</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card categoria-card shadow-sm">
-                    <img src="img/platos/plato.jpg" class="card-img-top" alt="Categoría Platos">
-                    <div class="card-body text-center">
-                        <a href="/platos.html" class="h5 card-title text-decoration-none text-primary fw-bold d-block">Platos Cerámica</a>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card categoria-card shadow-sm h-100">
+                        <img src="img/platos/plato.jpg" class="card-img-top" alt="Categoría Platos">
+                        <div class="card-body text-center">
+                            <a href="/platos.html" class="h5 card-title text-decoration-none text-primary fw-bold d-block">Platos Cerámica</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card categoria-card shadow-sm">
-                    <img src="img/maceteros/macetero.jpg" class="card-img-top" alt="Categoría Maceteros">
-                    <div class="card-body text-center">
-                        <a href="/maceteros.html" class="h5 card-title text-decoration-none text-primary fw-bold d-block">Maceteros Cerámica</a>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card categoria-card shadow-sm h-100">
+                        <img src="img/maceteros/macetero.jpg" class="card-img-top" alt="Categoría Maceteros">
+                        <div class="card-body text-center">
+                            <a href="/maceteros.html" class="h5 card-title text-decoration-none text-primary fw-bold d-block">Maceteros Cerámica</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card categoria-card shadow-sm">
-                    <img src="img/bowls/bowl.jpg" class="card-img-top" alt="Categoría Bowls">
-                    <div class="card-body text-center">
-                        <a href="/bowls.html" class="h5 card-title text-decoration-none text-primary fw-bold d-block">Bolws Cerámica</a>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card categoria-card shadow-sm h-100">
+                        <img src="img/bowls/bowl.jpg" class="card-img-top" alt="Categoría Bowls">
+                        <div class="card-body text-center">
+                            <a href="/bowls.html" class="h5 card-title text-decoration-none text-primary fw-bold d-block">Bolws Cerámica</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,26 +101,28 @@
     </main>
     <!--Footer-->
     <footer class="bg-dark text-light py-5 border-top" id="contacto">
-        <div class="container px-md-5">
-            <div class="row align-items-center text-center text-md-start m-0">
-                <!--Copyright-->
-                <div class="col-md-4 mb-3 mb-md-0 p-0">
+        <div class="container px-4 px-md-5">
+            
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-center gap-3 m-0">
+                
+                <div class="p-0 text-center text-sm-start">
                     <p class="m-0 text-white">&copy; 2026 aniMug</p>
                 </div>
-                <!--Contacto-->
-                <div class="col-md-4 mb-3 mb-md-0 text-md-center p-0">
-                    <p class="m-0 text-muted">
+                
+                <div class="p-0 text-center">
+                    <p class="m-0">
                         Contacto: <a href="mailto:info@animug.com" class="text-light text-decoration-none hover-link">info@animug.com</a>
                     </p>
                 </div>
-                <!--Redes Sociales-->
-                <div class="col-md-4 text-md-end p-0">
-                    <div class="d-flex justify-content-center justify-content-md-end gap-3 fs-5">
+                
+                <div class="p-0 text-center text-sm-end">
+                    <div class="d-flex justify-content-center justify-content-sm-end gap-3 fs-5">
                         <a href="https://www.instagram.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="https://www.tiktok.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="TikTok"><i class="bi bi-tiktok"></i></a>
                         <a href="https://www.youtube.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="YouTube"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
+
             </div>
         </div>
     </footer>

@@ -10,44 +10,35 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="navbar navbar-expand-md navbar-light bg-white border-bottom shadow-sm py-3" id="inicio">
-            <div class="container-fluid px-md-5">
-                <div class="row w-100 align-items-center m-0">
-                    <!--Logo-->
-                    <div class="col-4 d-flex justify-content-start align-items-center p-0">
-                        <a class="navbar-brand m-0" href="/index.html">
-                            <img src="img/logo.png" alt="Logo de aniMug" height="50" class="d-inline-block animacion_logo">
-                        </a>
-                    </div>
-                    <!--Nombre web-->
-                    <div class="col-4 d-flex justify-content-center align-items-center p-0">
-                        <h1 class="h3 m-0 fw-bold text-primary text-center">aniMug</h1>
-                    </div>
-                    <!--Navbar-->
-                    <div class="col-4 d-flex justify-content-end align-items-center p-0">
-                        <nav class="navbar navbar-expand-md p-0"> 
-                            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="menuNavegacion">
-                                <ul class="navbar-nav gap-3 mt-3 mt-md-0">
-                                    <li class="nav-item">
-                                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html">Inicio</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#categoria">Categorías</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#contacto">Contacto</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
+    <!--Header-->
+    <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm py-3" id="inicio">
+        <div class="container-fluid px-md-5">
+            <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="/index.html">
+                <img src="img/logo.png" alt="Logo de aniMug" height="50" class="d-inline-block animacion_logo">
+                <h1 class="h3 m-0 fw-bold text-primary">aniMug</h1>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+                <ul class="navbar-nav align-items-center gap-3 mt-3 mt-lg-0 ms-auto me-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#categoria">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="/index.html#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0">
+                    <a class="btn btn-danger fw-semibold" href="#">Iniciar Sesión</a>
+                    <a class="btn btn-primary fw-semibold" href="/registro.html">Registrarse</a>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
     <main>
         <section class="categoria-productos my-5">
@@ -67,82 +58,95 @@
                 <div class="col-4 p-0"></div>
             </div>
             <p class="text-center mt-2 px-3 text-primary">Explora nuestra colección exclusiva de maceteros ceramicos.</p>
-
-            <div class="productos-grid">
-
-                <div class="card producto-card shadow-sm border-0 position-relative" style="width: 18rem;">
-                    <div class="position-relative overflow-hidden">
-                        <img src="img/maceteros/macetero.jpg" class="card-img-top" alt="Macetero de Diseño Montaña">
-                        <p class="badge-new">80% OFF</p>
-                    </div>
-                    <div class="card-body px-3 py-3">
-                        <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Macetero de Diseño Montaña</h3>
-                        <p class="text-start">Un macetero con un diseño inspirado en la naturaleza.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <span class="fs-4 fw-bold text-dark">$2.600</span>
-                            <a href="#" class="text-decoration-none link-dark fs-3">
-                                <i class="bi bi-cart-plus"></i>
-                            </a>
+            <!--Productos-->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center m-0">
+                <div class="col d-flex justify-content-center">
+                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100" style="max-width: 22rem;">
+                        <div class="position-relative overflow-hidden">
+                            <img src="img/maceteros/macetero.jpg" class="card-img-top" alt="Macetero de Diseño Montaña">
+                            <p class="badge-new">80% OFF</p>
+                        </div>
+                        <div class="card-body px-3 py-3 d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Macetero de Diseño Montaña</h3>
+                                <p class="text-start">Un macetero con un diseño inspirado en la naturaleza.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fs-4 fw-bold text-dark">$2.600</span>
+                                <a href="#" class="text-decoration-none link-dark fs-3">
+                                    <i class="bi bi-cart-plus"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card producto-card shadow-sm border-0 position-relative" style="width: 18rem;">
-                    <div class="position-relative overflow-hidden">
-                        <img src="img/maceteros/macetero2.jpg" class="card-img-top" alt="Macetero de Diseño Gato Negro">
-                    </div>
-                    <div class="card-body px-3 py-3">
-                        <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Macetero de Diseño Gato Negro</h3>
-                        <p class="text-start">Un macetero con un diseño inspirado en los gatos curiosos.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <span class="fs-4 fw-bold text-dark">$12.990</span>
-                            <a href="#" class="text-decoration-none link-dark fs-3">
-                                <i class="bi bi-cart-plus"></i>
-                            </a>
+                <div class="col d-flex justify-content-center">
+                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100" style="max-width: 22rem;">
+                        <div class="position-relative overflow-hidden">
+                            <img src="img/maceteros/macetero2.jpg" class="card-img-top" alt="Macetero de Diseño Gato Negro">
+                        </div>
+                        <div class="card-body px-3 py-3 d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Macetero de Diseño Gato Negro</h3>
+                                <p class="text-start">Un macetero con un diseño inspirado en los gatos curiosos.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fs-4 fw-bold text-dark">$12.990</span>
+                                <a href="#" class="text-decoration-none link-dark fs-3">
+                                    <i class="bi bi-cart-plus"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card producto-card shadow-sm border-0 position-relative" style="width: 18rem;">
-                    <div class="position-relative overflow-hidden">
-                        <img src="img/maceteros/macetero3.jpg" class="card-img-top" alt="Macetero de Diseño Pura Vida">
-                    </div>
-                    <div class="card-body px-3 py-3">
-                        <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Macetero de Diseño Pura Vida</h3>
-                        <p class="text-start">Un macetero con un diseño inspirado en la vida tranquila.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <span class="fs-4 fw-bold text-dark">$12.990</span>
-                            <a href="#" class="text-decoration-none link-dark fs-3">
-                                <i class="bi bi-cart-plus"></i>
-                            </a>
+                <div class="col d-flex justify-content-center">
+                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100" style="max-width: 22rem;">
+                        <div class="position-relative overflow-hidden">
+                            <img src="img/maceteros/macetero3.jpg" class="card-img-top" alt="Macetero de Diseño Pura Vida">
+                        </div>
+                        <div class="card-body px-3 py-3 d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Macetero de Diseño Pura Vida</h3>
+                                <p class="text-start">Un macetero con un diseño inspirado en la vida tranquila.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fs-4 fw-bold text-dark">$12.990</span>
+                                <a href="#" class="text-decoration-none link-dark fs-3">
+                                    <i class="bi bi-cart-plus"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
+    <!--Footer-->
     <footer class="bg-dark text-light py-5 border-top" id="contacto">
-        <div class="container px-md-5">
-            <div class="row align-items-center text-center text-md-start m-0">
-                <!--Copyright-->
-                <div class="col-md-4 mb-3 mb-md-0 p-0">
+        <div class="container px-4 px-md-5">
+            
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-center gap-3 m-0">
+                
+                <div class="p-0 text-center text-sm-start">
                     <p class="m-0 text-white">&copy; 2026 aniMug</p>
                 </div>
-                <!--Contacto-->
-                <div class="col-md-4 mb-3 mb-md-0 text-md-center p-0">
-                    <p class="m-0 text-muted">
+                
+                <div class="p-0 text-center">
+                    <p class="m-0">
                         Contacto: <a href="mailto:info@animug.com" class="text-light text-decoration-none hover-link">info@animug.com</a>
                     </p>
                 </div>
-                <!--Redes Sociales-->
-                <div class="col-md-4 text-md-end p-0">
-                    <div class="d-flex justify-content-center justify-content-md-end gap-3 fs-5">
+                
+                <div class="p-0 text-center text-sm-end">
+                    <div class="d-flex justify-content-center justify-content-sm-end gap-3 fs-5">
                         <a href="https://www.instagram.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="https://www.tiktok.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="TikTok"><i class="bi bi-tiktok"></i></a>
                         <a href="https://www.youtube.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="YouTube"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
+
             </div>
         </div>
     </footer>
