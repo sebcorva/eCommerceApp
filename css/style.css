@@ -146,6 +146,17 @@
     transform: scale(1.05); 
 }
 
+.bi-cart-plus {
+    display: inline-block;
+    transition: color 0.3s ease; 
+    cursor: pointer;
+}
+
+.bi-cart-plus.activo {
+    color: #dc3545 !important; 
+    animation: saltito 0.4s ease-out; 
+}
+
 .with_categoria {
     width: 18rem;
 }
@@ -247,5 +258,17 @@ main {
     }
     100% {
         transform: rotate(0deg);  
+    }
+}
+
+@keyframes saltito {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px); 
+    }
+    100% {
+        transform: translateY(0); 
     }
 }

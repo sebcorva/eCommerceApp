@@ -43,20 +43,23 @@
     <main>
         <section class="container-registro">
             <div class="row justify-content-center">
-                <div class="col-md-6 bg-light p-4 rounded shadow mt-lg-5">
+                <div class="col-md-6 bg-light p-4 rounded shadow my-lg-5">
                     <h2 class="text-center mb-4 text-secondary">Registro</h2>
-                    <form>
+                    <form id="registroForm" novalidate>
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo">
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo" required>
+                            <div class="invalid-feedback">El nombre es obligatorio.</div>
                         </div>
                         <div class="mb-3">
                             <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
-                            <input type="text" class="form-control" id="fecha_nacimiento" placeholder="Seleccione su fecha...">
+                            <input type="date" class="form-control" id="fecha_nacimiento" placeholder="Seleccione su fecha..." required>
+                            <div class="invalid-feedback">La fecha de nacimiento es obligatoria.</div>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+                            <input type="email" class="form-control" id="email" placeholder="Ingrese su email" required>
+                            <div class="invalid-feedback">El email es obligatorio.</div>
                         </div>
                         <div class="mb-3">
                             <label for="direccion" class="form-label">Dirección de Despacho</label>
@@ -76,6 +79,7 @@
                         </div>
                         <div class="text-center mt-4">
                             <button type="submit" class="btn btn-primary">Registrarse</button>
+                            <button type="reset" class="btn btn-secondary">Limpiar</button>
                         </div>
                     </form>
                 </div>
@@ -115,6 +119,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    <!--Importar archivos JS-->
     <script src="/js/setFechaNacimiento.js"></script>
+    <script src="/js/registroForm.js"></script>
 </body>
 </html>
