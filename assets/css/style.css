@@ -84,13 +84,6 @@
     color: var(--color-secundario) !important;
 }
 
-@media (min-width: 768px) {
-    .about-us-text {
-        margin-left: 40%;
-        width: 40%;
-    }
-}
-
 .productos-grid {
     align-items: center;
     flex-wrap: wrap;
@@ -203,6 +196,29 @@ body {
 
 main {
     flex: 1 0 auto; 
+}
+
+.loginImage {
+    position: relative;
+    top: 0; 
+    left: 0; 
+    object-fit: cover;
+}
+
+.perfilImage {
+   width: 30px;
+    height: 30px; 
+    object-fit: cover;
+}
+.btn-custom-profile {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .about-us-text {
+        margin-left: 40%;
+        width: 40%;
+    }
 }
 
 @keyframes agrandarLogo {

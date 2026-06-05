@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <!--Header-->
     <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm py-3" id="inicio">
@@ -17,7 +20,9 @@
                 <img src="assets/img/logo.png" alt="Logo de aniMug" height="50" class="d-inline-block animacion_logo">
                 <h1 class="h3 m-0 fw-bold text-primary">aniMug</h1>
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
@@ -26,14 +31,25 @@
                         <a class="nav-link p-0 text-primary fw-semibold link-primary" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="index.html#categoria">Categorías</a>
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary"
+                            href="index.html#categoria">Categorías</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="index.html#contacto">Contacto</a>
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary"
+                            href="index.html#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0 text-danger position-relative" href="carrito.html"
+                            title="Carrito de compras">
+                            <i class="bi bi-cart fs-4"></i>
+                            <!--indicador cantidad del carrito-->
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">0</span>
+                        </a>
                     </li>
                 </ul>
                 <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0">
-                    <a class="btn btn-danger fw-semibold" href="#">Iniciar Sesión</a>
+                    <a class="btn btn-danger fw-semibold" href="login.html">Iniciar Sesión</a>
                     <a class="btn btn-primary fw-semibold" href="registro.html">Registrarse</a>
                 </div>
             </div>
@@ -48,12 +64,14 @@
                     <form id="registroForm" novalidate>
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo" required>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo"
+                                required>
                             <div class="invalid-feedback">El nombre es obligatorio.</div>
                         </div>
                         <div class="mb-3">
                             <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
-                            <input type="date" class="form-control" id="fecha_nacimiento" placeholder="Seleccione su fecha..." required>
+                            <input type="date" class="form-control" id="fecha_nacimiento"
+                                placeholder="Seleccione su fecha..." required>
                             <div class="invalid-feedback">La fecha de nacimiento es obligatoria.</div>
                         </div>
                         <div class="mb-3">
@@ -63,19 +81,23 @@
                         </div>
                         <div class="mb-3">
                             <label for="direccion" class="form-label">Dirección de Despacho</label>
-                            <input type="text" class="form-control" id="direccion" placeholder="Ingrese su dirección de despacho">
+                            <input type="text" class="form-control" id="direccion"
+                                placeholder="Ingrese su dirección de despacho">
                         </div>
                         <div class="mb-3">
                             <label for="username" class="form-label">Nombre de Usuario</label>
-                            <input type="text" class="form-control" id="username" placeholder="Ingrese su nombre de usuario">
+                            <input type="text" class="form-control" id="username"
+                                placeholder="Ingrese su nombre de usuario">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+                            <input type="password" class="form-control" id="password"
+                                placeholder="Ingrese su contraseña">
                         </div>
                         <div class="mb-3">
                             <label for="password2" class="form-label">Confirmar Contraseña</label>
-                            <input type="password" class="form-control" id="password2" placeholder="Ingrese su contraseña nuevamente">
+                            <input type="password" class="form-control" id="password2"
+                                placeholder="Ingrese su contraseña nuevamente">
                         </div>
                         <div class="text-center mt-4">
                             <button type="submit" class="btn btn-primary">Registrarse</button>
@@ -89,24 +111,31 @@
     <!--Footer-->
     <footer class="bg-dark text-light py-5 border-top" id="contacto">
         <div class="container px-4 px-md-5">
-            
+
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-center gap-3 m-0">
-                
+
                 <div class="p-0 text-center text-sm-start">
                     <p class="m-0 text-white">&copy; 2026 aniMug</p>
                 </div>
-                
+
                 <div class="p-0 text-center">
                     <p class="m-0">
-                        Contacto: <a href="mailto:info@animug.com" class="text-light text-decoration-none hover-link">info@animug.com</a>
+                        Contacto: <a href="mailto:info@animug.com"
+                            class="text-light text-decoration-none hover-link">info@animug.com</a>
                     </p>
                 </div>
-                
+
                 <div class="p-0 text-center text-sm-end">
                     <div class="d-flex justify-content-center justify-content-sm-end gap-3 fs-5">
-                        <a href="https://www.instagram.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.tiktok.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="TikTok"><i class="bi bi-tiktok"></i></a>
-                        <a href="https://www.youtube.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.instagram.com/animug/" target="_blank"
+                            class="text-light text-decoration-none hover-link" title="Instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/animug/" target="_blank"
+                            class="text-light text-decoration-none hover-link" title="TikTok"><i
+                                class="bi bi-tiktok"></i></a>
+                        <a href="https://www.youtube.com/animug/" target="_blank"
+                            class="text-light text-decoration-none hover-link" title="YouTube"><i
+                                class="bi bi-youtube"></i></a>
                     </div>
                 </div>
 
@@ -114,13 +143,17 @@
         </div>
     </footer>
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <!--Logica Form Fecha de Nacimiento-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
     <!--Importar archivos JS-->
+    <script src="assets/js/authHeader.js"></script>
     <script src="assets/js/setFechaNacimiento.js"></script>
     <script src="assets/js/registroForm.js"></script>
 </body>
+
 </html>

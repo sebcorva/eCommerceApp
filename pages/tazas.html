@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categoría: Tazas</title>
     <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
     <!--Header-->
     <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm py-3" id="inicio">
         <div class="container-fluid px-md-5">
             <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="../index.html">
-                <img src="../assets/img/logo.png" alt="Logo de aniMug" height="50" class="d-inline-block animacion_logo">
+                <img src="../assets/img/logo.png" alt="Logo de aniMug" height="50"
+                    class="d-inline-block animacion_logo">
                 <h1 class="h3 m-0 fw-bold text-primary">aniMug</h1>
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
@@ -26,10 +32,21 @@
                         <a class="nav-link p-0 text-primary fw-semibold link-primary" href="../index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="../index.html#categoria">Categorías</a>
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary"
+                            href="../index.html#categoria">Categorías</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-0 text-primary fw-semibold link-primary" href="../index.html#contacto">Contacto</a>
+                        <a class="nav-link p-0 text-primary fw-semibold link-primary"
+                            href="../index.html#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0 text-danger position-relative" href="carrito.html"
+                            title="Carrito de compras">
+                            <i class="bi bi-cart fs-4"></i>
+                            <!--indicador cantidad del carrito-->
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">0</span>
+                        </a>
                     </li>
                 </ul>
                 <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0">
@@ -45,9 +62,11 @@
             <div class="row align-items-center mb-4 m-0">
                 <!--Botón Volver-->
                 <div class="col-4 d-flex justify-content-start align-items-center p-0">
-                    <a href="../index.html" class="btn btn-outline-secondary ms-3 d-none d-md-inline-block">Volver a Inicio</a>
-                    
-                    <a href="../index.html" class="btn btn-outline-secondary ms-3 d-inline-block d-md-none" aria-label="Volver a Inicio">
+                    <a href="../index.html" class="btn btn-outline-secondary ms-3 d-none d-md-inline-block">Volver a
+                        Inicio</a>
+
+                    <a href="../index.html" class="btn btn-outline-secondary ms-3 d-inline-block d-md-none"
+                        aria-label="Volver a Inicio">
                         <i class="bi bi-arrow-left"></i>
                     </a>
                 </div>
@@ -61,18 +80,24 @@
             <!-- Productos-->
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center m-0">
                 <div class="col d-flex justify-content-center">
-                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100" style="max-width: 22rem;">
+                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100"
+                        style="max-width: 22rem;">
                         <div class="position-relative overflow-hidden">
-                            <img src="../assets/img/tazas/taza.jpg" class="card-img-top" alt="Taza de Main Character Energy">
+                            <img src="../assets/img/tazas/taza.jpg" class="card-img-top"
+                                alt="Taza de Main Character Energy">
                         </div>
                         <div class="card-body px-3 py-3 d-flex flex-column justify-content-between">
                             <div>
-                                <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Main Character Energy</h3>
-                                <p class="text-start">Una taza diseñada para aquellos que comienzan su día con energía.</p>
+                                <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Main Character Energy
+                                </h3>
+                                <p class="text-start">Una taza diseñada para aquellos que comienzan su día con energía.
+                                </p>
                             </div>
                             <div class="d-flex justify-content-between align-items-center mt-3">
                                 <span class="fs-4 fw-bold text-dark">$12.990</span>
-                                <a href="#" class="text-decoration-none link-dark fs-3">
+                                <a href="#" class="text-decoration-none link-dark fs-3 btn-agregar-carrito"
+                                    data-id="taza-main-character" data-nombre="Main Character Energy"
+                                    data-precio="12990" data-imagen="../assets/img/tazas/taza.jpg">
                                     <i class="bi bi-cart-plus"></i>
                                 </a>
                             </div>
@@ -81,14 +106,17 @@
                 </div>
 
                 <div class="col d-flex justify-content-center">
-                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100" style="max-width: 22rem;">
+                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100"
+                        style="max-width: 22rem;">
                         <div class="position-relative overflow-hidden">
-                            <img src="../assets/img/tazas/taza2.jpg" class="card-img-top" alt="Taza de But First Coffee">
+                            <img src="../assets/img/tazas/taza2.jpg" class="card-img-top"
+                                alt="Taza de But First Coffee">
                         </div>
                         <div class="card-body px-3 py-3 d-flex flex-column justify-content-between">
                             <div>
                                 <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">But First Coffee</h3>
-                                <p class="text-start">Una taza diseñada para aquellos que no pueden comenzar su día sin café.</p>
+                                <p class="text-start">Una taza diseñada para aquellos que no pueden comenzar su día sin
+                                    café.</p>
                             </div>
                             <div class="d-flex justify-content-between align-items-center mt-3">
                                 <span class="fs-4 fw-bold text-dark">$12.990</span>
@@ -101,14 +129,17 @@
                 </div>
 
                 <div class="col d-flex justify-content-center">
-                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100" style="max-width: 22rem;">
+                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100"
+                        style="max-width: 22rem;">
                         <div class="position-relative overflow-hidden">
-                            <img src="../assets/img/tazas/taza3.jpg" class="card-img-top" alt="Taza de Ask Me About My Cat">
+                            <img src="../assets/img/tazas/taza3.jpg" class="card-img-top"
+                                alt="Taza de Ask Me About My Cat">
                             <p class="badge-new">30% OFF</p>
                         </div>
                         <div class="card-body px-3 py-3 d-flex flex-column justify-content-between">
                             <div>
-                                <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Ask Me About My Cat</h3>
+                                <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Ask Me About My Cat
+                                </h3>
                                 <p class="text-start">Una taza diseñada para aquellos que aman hablar de sus gatos.</p>
                             </div>
                             <div class="d-flex justify-content-between align-items-center mt-3">
@@ -126,24 +157,31 @@
     <!--Footer-->
     <footer class="bg-dark text-light py-5 border-top" id="contacto">
         <div class="container px-4 px-md-5">
-            
+
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-center gap-3 m-0">
-                
+
                 <div class="p-0 text-center text-sm-start">
                     <p class="m-0 text-white">&copy; 2026 aniMug</p>
                 </div>
-                
+
                 <div class="p-0 text-center">
                     <p class="m-0">
-                        Contacto: <a href="mailto:info@animug.com" class="text-light text-decoration-none hover-link">info@animug.com</a>
+                        Contacto: <a href="mailto:info@animug.com"
+                            class="text-light text-decoration-none hover-link">info@animug.com</a>
                     </p>
                 </div>
-                
+
                 <div class="p-0 text-center text-sm-end">
                     <div class="d-flex justify-content-center justify-content-sm-end gap-3 fs-5">
-                        <a href="https://www.instagram.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.tiktok.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="TikTok"><i class="bi bi-tiktok"></i></a>
-                        <a href="https://www.youtube.com/animug/" target="_blank" class="text-light text-decoration-none hover-link" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.instagram.com/animug/" target="_blank"
+                            class="text-light text-decoration-none hover-link" title="Instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/animug/" target="_blank"
+                            class="text-light text-decoration-none hover-link" title="TikTok"><i
+                                class="bi bi-tiktok"></i></a>
+                        <a href="https://www.youtube.com/animug/" target="_blank"
+                            class="text-light text-decoration-none hover-link" title="YouTube"><i
+                                class="bi bi-youtube"></i></a>
                     </div>
                 </div>
 
@@ -151,8 +189,12 @@
         </div>
     </footer>
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <!-- Importar archivos JS-->
-     <script src="../assets/js/carritoEffect.js"></script>
+    <script src="../assets/js/authHeader.js"></script>
+    <script src="../assets/js/carritoEffect.js"></script>
 </body>
+
 </html>

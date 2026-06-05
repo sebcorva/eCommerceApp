@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         e.stopPropagation();
 
-        
+
         let isValid = true;
         const nombre = document.getElementById("nombre");
         const fechaNacimiento = document.getElementById("fecha_nacimiento");
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const hoy = new Date();
             let edad = hoy.getFullYear() - fechaNac.getFullYear();
             const mes = hoy.getMonth() - fechaNac.getMonth();
-            
+
             if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
                 edad--;
             }
@@ -111,11 +111,41 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             direccion.classList.remove("is-invalid", "is-valid");
         }
+
+        // Verificar si el username o email ya existen en localStorage
+        const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+        const usernameVal = username.value.trim();
+        const emailVal = email.value.trim();
+
+        if (usernameVal) {
+            const existeUsuario = usuarios.some(u => u.username.toLowerCase() === usernameVal.toLowerCase());
+            if (existeUsuario) {
+                setError(username, "El nombre de usuario ya está registrado.");
+            }
+        }
+        if (emailVal && emailRegex.test(emailVal)) {
+            const existeEmail = usuarios.some(u => u.email.toLowerCase() === emailVal.toLowerCase());
+            if (existeEmail) {
+                setError(email, "El correo electrónico ya está registrado.");
+            }
+        }
         //Fin validaciones 
 
         if (isValid) {
-            alert("¡Formulario validado con éxito! Procediendo al registro...");
-            // form.submit(); // Descomenta esta línea si quieres enviar el formulario al servidor
+            const nuevoUsuario = {
+                nombre: nombre.value.trim(),
+                fechaNacimiento: fechaNacimiento.value,
+                email: emailVal,
+                direccion: direccion.value.trim(),
+                username: usernameVal,
+                password: password.value
+            };
+
+            usuarios.push(nuevoUsuario);
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+            console.log("¡Registro completado con éxito! Ahora puedes iniciar sesión.");
+            window.location.href = "login.html";
         }
     });
 
