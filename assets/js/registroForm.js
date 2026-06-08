@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("registroForm");
 
     form.addEventListener("submit", (e) => {
-        //Evitar el envio automatico del formulario antes de validar
+
         e.preventDefault();
         e.stopPropagation();
 
@@ -34,16 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
             element.classList.add("is-valid");
         };
 
-        // Validaciones de campos
+        //Validaciones de campos
 
-        // Nombre
+        //Nombre
         if (!nombre.value.trim()) {
             setError(nombre, "El nombre es obligatorio y no puede estar vacío.");
         } else {
             setSuccess(nombre);
         }
 
-        // Fecha de Nacimiento
+        //Fecha de Nacimiento
         if (!fechaNacimiento.value) {
             setError(fechaNacimiento, "La fecha de nacimiento es obligatoria.");
         } else {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        // Email
+        //Email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email.value.trim()) {
             setError(email, "El email es obligatorio.");
@@ -73,14 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
             setSuccess(email);
         }
 
-        // Nombre de Usuario
+        //Nombre de Usuario
         if (!username.value.trim()) {
             setError(username, "El nombre de usuario es obligatorio.");
         } else {
             setSuccess(username);
         }
 
-        // Contraseña
+        //Contraseña
         const passValue = password.value;
         const tieneLetraMayuscula = /[A-Z]/.test(passValue);
         const tieneNumero = /[0-9]/.test(passValue);
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setSuccess(password);
         }
 
-        // Confirmar Contraseña
+        //Confirmar Contraseña
         if (!password2.value) {
             setError(password2, "Por favor, confirme su contraseña.");
         } else if (password.value !== password2.value) {
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setSuccess(password2);
         }
 
-        // Dirección de despacho (Opcional)
+        //Dirección de despacho (Opcional)
         const direccion = document.getElementById("direccion");
         if (direccion.value.trim()) {
             setSuccess(direccion);
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             direccion.classList.remove("is-invalid", "is-valid");
         }
 
-        // Verificar si el username o email ya existen en localStorage
+        //Verificar si el username o email ya existen en localStorage
         const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
         const usernameVal = username.value.trim();
         const emailVal = email.value.trim();
@@ -138,18 +138,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 email: emailVal,
                 direccion: direccion.value.trim(),
                 username: usernameVal,
-                password: password.value
+                password: password.value,
+                role: "usuario"
             };
 
             usuarios.push(nuevoUsuario);
             localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-            console.log("¡Registro completado con éxito! Ahora puedes iniciar sesión.");
+            alert("¡Registro completado con éxito! Ahora puedes iniciar sesión.");
             window.location.href = "login.html";
         }
     });
 
-    // Limpiar formulario
+    //Limpiar formulario
     form.addEventListener("reset", () => {
         const inputs = form.querySelectorAll(".form-control");
         inputs.forEach(input => {

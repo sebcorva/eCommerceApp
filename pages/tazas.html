@@ -40,7 +40,7 @@
                             href="../index.html#contacto">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-0 text-danger position-relative" href="carrito.html"
+                        <a class="nav-link p-0 text-danger position-relative" href="/carrito.html"
                             title="Carrito de compras">
                             <i class="bi bi-cart fs-4"></i>
                             <!--indicador cantidad del carrito-->
@@ -78,79 +78,8 @@
             </div>
             <p class="text-center text-primary mt-2 px-3">Explora nuestra colección exclusiva de tazas cerámicas.</p>
             <!-- Productos-->
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center m-0">
-                <div class="col d-flex justify-content-center">
-                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100"
-                        style="max-width: 22rem;">
-                        <div class="position-relative overflow-hidden">
-                            <img src="../assets/img/tazas/taza.jpg" class="card-img-top"
-                                alt="Taza de Main Character Energy">
-                        </div>
-                        <div class="card-body px-3 py-3 d-flex flex-column justify-content-between">
-                            <div>
-                                <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Main Character Energy
-                                </h3>
-                                <p class="text-start">Una taza diseñada para aquellos que comienzan su día con energía.
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="fs-4 fw-bold text-dark">$12.990</span>
-                                <a href="#" class="text-decoration-none link-dark fs-3 btn-agregar-carrito"
-                                    data-id="taza-main-character" data-nombre="Main Character Energy"
-                                    data-precio="12990" data-imagen="../assets/img/tazas/taza.jpg">
-                                    <i class="bi bi-cart-plus"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col d-flex justify-content-center">
-                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100"
-                        style="max-width: 22rem;">
-                        <div class="position-relative overflow-hidden">
-                            <img src="../assets/img/tazas/taza2.jpg" class="card-img-top"
-                                alt="Taza de But First Coffee">
-                        </div>
-                        <div class="card-body px-3 py-3 d-flex flex-column justify-content-between">
-                            <div>
-                                <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">But First Coffee</h3>
-                                <p class="text-start">Una taza diseñada para aquellos que no pueden comenzar su día sin
-                                    café.</p>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="fs-4 fw-bold text-dark">$12.990</span>
-                                <a href="#" class="text-decoration-none link-dark fs-3">
-                                    <i class="bi bi-cart-plus"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col d-flex justify-content-center">
-                    <div class="card producto-card shadow-sm border-0 position-relative h-100 w-100"
-                        style="max-width: 22rem;">
-                        <div class="position-relative overflow-hidden">
-                            <img src="../assets/img/tazas/taza3.jpg" class="card-img-top"
-                                alt="Taza de Ask Me About My Cat">
-                            <p class="badge-new">30% OFF</p>
-                        </div>
-                        <div class="card-body px-3 py-3 d-flex flex-column justify-content-between">
-                            <div>
-                                <h3 class="h5 card-title text-start fw-semibold mb-2 text-primary">Ask Me About My Cat
-                                </h3>
-                                <p class="text-start">Una taza diseñada para aquellos que aman hablar de sus gatos.</p>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="fs-4 fw-bold text-dark">$9.100</span>
-                                <a href="#" class="text-decoration-none link-dark fs-3">
-                                    <i class="bi bi-cart-plus"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="contenedor-productos" data-categoria="tazas"
+                class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center m-0">
             </div>
         </section>
     </main>
@@ -194,7 +123,8 @@
         crossorigin="anonymous"></script>
     <!-- Importar archivos JS-->
     <script src="../assets/js/authHeader.js"></script>
-    <script src="../assets/js/carritoEffect.js"></script>
+    <script src="../assets/js/productos.js"></script>
+    <script src="../assets/js/renderProductos.js" type="module"></script>
 </body>
 
 </html>

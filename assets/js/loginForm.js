@@ -44,11 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
             setSuccess(password);
         }
 
-        // Si los campos no están vacíos, validar contra localStorage
+        //Si los campos no están vacíos, validar contra localStorage
         if (isValid) {
             const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-            // Buscar el usuario (ignorar mayúsculas/minúsculas en el username)
+            //Buscar el usuario
             const usuarioEncontrado = usuarios.find(u => u.username.toLowerCase() === usernameVal.toLowerCase());
 
             if (!usuarioEncontrado) {
@@ -59,16 +59,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 setSuccess(username);
                 setSuccess(password);
 
-                // Guardar usuario en sesión activa
-                localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado));
+                if (usuarioEncontrado.role == "admin") {
+                    sessionStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado));
 
-                console.log(`¡Bienvenido de vuelta, ${usuarioEncontrado.nombre}!`);
-                window.location.href = "index.html";
+                    alert(`¡Bienvenido Panel de Control, Administrador ${usuarioEncontrado.nombre}!`);
+                    window.location.href = "adminPanel.html";
+                } else {
+                    localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado));
+
+                    if (usuarioEncontrado.carrito) {
+                        localStorage.setItem("carrito", JSON.stringify(usuarioEncontrado.carrito));
+                    } else {
+                        localStorage.removeItem("carrito");
+                    }
+
+                    alert(`¡Bienvenido de vuelta, ${usuarioEncontrado.nombre}!`);
+                    window.location.href = "index.html";
+                }
+
             }
         }
     });
 
-    // Limpieza de estados al escribir
+    //Limpieza de estados al escribir
     username.addEventListener("input", () => {
         username.classList.remove("is-invalid", "is-valid");
     });
